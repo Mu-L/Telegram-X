@@ -41,7 +41,6 @@ open class CMakePlugin : Plugin<Project> {
               )
               arguments(
                 "-DANDROID_STL=${if (Config.SHARED_STL) "c++_shared" else "c++_static"}",
-                "-DANDROID_PLATFORM=android-${Config.MIN_SDK_VERSION}",
                 "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
                 "-DCMAKE_SKIP_RPATH=ON",
                 "-DCMAKE_C_VISIBILITY_PRESET=hidden",
@@ -69,7 +68,6 @@ open class CMakePlugin : Plugin<Project> {
 
               arguments(
                 "-DANDROID_STL=${if (Config.SHARED_STL) "c++_shared" else "c++_static"}",
-                "-DANDROID_PLATFORM=android-${Config.MIN_SDK_VERSION}",
                 "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
                 "-DCMAKE_SKIP_RPATH=ON",
                 "-DCMAKE_C_VISIBILITY_PRESET=hidden",
